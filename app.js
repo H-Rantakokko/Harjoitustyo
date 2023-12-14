@@ -3,11 +3,11 @@ const movies = require('./movies.json')
 
 // Tämä seuraava näyttää kaikki elokuvat heti kun sivu ladataan
 async function showMovies() {
-    console.log(movies)
+    // Tämä lisätty jotta voidaan julkaista renderin kautta
+    if (typeof window !== 'undefined') {
+        const moviediv = document.getElementById('movies')
 
-    let moviediv = document.getElementById("movies")
-
-    movies.forEach(movie => {
+        movies.forEach((movie) => {
         let moviecontainer = document.createElement('div')
         moviecontainer.className = 'movieContainer'
         // Haetaan kuvat
@@ -73,5 +73,6 @@ async function updateMovies() {
 
         document.getElementById("movies").appendChild(moviecontainer)
     })
+}
 }
 showMovies()
