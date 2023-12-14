@@ -1,15 +1,9 @@
-async function getHouses() {
-    let url = 'movies.json'
-    try {
-        let res = await fetch(url)
-        return await res.json()
-    } catch (error) {
-        console.log(error)
-    }
-}
+// Haetaan tiedot movies.json tiedostosta
+const movies = require('./movies.json')
 
+// Tämä seuraava näyttää kaikki elokuvat heti kun sivu ladataan
 async function showMovies() {
-    movies = await getHouses()
+    movies = await getMovies()
     console.log(movies)
 
     let moviediv = document.getElementById("movies")
@@ -17,18 +11,18 @@ async function showMovies() {
     movies.forEach(movie => {
         let moviecontainer = document.createElement('div')
         moviecontainer.className = 'movieContainer'
-
+        // Haetaan kuvat
         let image = document.createElement('img')
         image.src = movie.image
         image.className = 'movieImage'
-
+        // Haetaan elokuvan nimi
         let header = document.createElement('p')
         header.className = 'header'
         header.innerHTML = movie.name
-
+        // Haetaan julkaisuvuosi
         let year = document.createElement('p')
         year.innerHTML = movie.year
-
+        // Haetaan kuvaus
         let description = document.createElement('p')
         description.innerHTML = movie.description
 
@@ -40,36 +34,36 @@ async function showMovies() {
         moviediv.appendChild(moviecontainer)
     })
 }
-
-function updateMovies() {
+// Tämän avulla päivitetään sivu käyttäjän valintojen mukaan
+async function updateMovies() {
     let key1 = document.getElementById("key1").value
     let key2 = document.getElementById("key2").value
 
-    // Tyhjennä elokuvien div ennen päivitystä
+    // Tyhjennetään
     document.getElementById("movies").innerHTML = ""
 
-    // Suodata elokuvat key1 ja key2 perusteella
+    // Suodatetaan avainten perusteella käyttäjälle näytettävät elokuvat
     let filteredMovies = movies.filter(movie => {
         return (key1 === "" || movie.key1 === key1) &&
                (key2 === "" || movie.key2 === key2)
     });
 
-    // Näytä suodatetut elokuvat
+    // Näytetään avainten perusteella suodatetut elokuvat, käytännössä toistoa aikaisemmasta koodista
     filteredMovies.forEach(movie => {
         let moviecontainer = document.createElement('div')
         moviecontainer.className = 'movieContainer'
-
+        // Haetaan kuvat
         let image = document.createElement('img')
         image.src = movie.image
         image.className = 'movieImage'
-
+        // Haetaan elokuvan nimi
         let header = document.createElement('p')
         header.className = 'header'
         header.innerHTML = movie.name
-
+        // Haetaan julkaisuvuosi
         let year = document.createElement('p')
         year.innerHTML = movie.year
-
+        // Haetaan kuvaus
         let description = document.createElement('p')
         description.innerHTML = movie.description
 
@@ -81,6 +75,4 @@ function updateMovies() {
         document.getElementById("movies").appendChild(moviecontainer)
     })
 }
-
-// Kutsu showMovies alussa
 showMovies()

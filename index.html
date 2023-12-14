@@ -8,6 +8,12 @@
 </head>
 <body>
     <div>
+        <!--
+            Tässä käytetty alkuperäisestä suunnitelmasta poiketen "pudotusvalikkoa"
+            Alunperin tarkoitus oli tehdä jotain H4T3 tapaan mutta koska vaihtoehtoja joiden avulla elokuva valitaan
+            on niin vähän niin toteutus näytti kummalliselle.
+        -->
+        <!--Tässä ensimmäisessä käsitellään key1 (4 eri vaihtoehtoa)-->
         <label for="key1">Choose genre:</label>
         <select id="key1" onchange="updateMovies()">
             <option value="">All</option>
@@ -18,6 +24,7 @@
         </select>
     </div>
     <div>
+        <!--Tässä käsitellään key2 (2 eri vaihtoehtoa)-->
         <label for="key2">Choose option:</label>
         <select id="key2" onchange="updateMovies()">
             <option value="">All</option>
@@ -25,6 +32,7 @@
             <option value="Movie of the year">Movie of the year</option>
         </select>
     </div>
+    <!--Lisätty tämä jotta sivulla näkyvät myös elokuvat eivätkä vain valikot-->
     <div id="movies"></div>
     <script src="app.js"></script>
 </body>
