@@ -3,7 +3,6 @@ const movies = require('./movies.json')
 
 // Tämä seuraava näyttää kaikki elokuvat heti kun sivu ladataan
 async function showMovies() {
-    movies = await getMovies()
     console.log(movies)
 
     let moviediv = document.getElementById("movies")
