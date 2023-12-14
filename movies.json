@@ -1,0 +1,66 @@
+[
+    {
+      "image":"/kansikuvat/kuva1.jpg",
+      "name":"All hope is lost",
+      "year":2021,
+      "description":"People start disappearing every night after dark. Disappearances happen all over the world and no one knows how to solve the disappearances. Do you dare to find out what is behind the disappearances?",
+      "key1":"Horror",
+      "key2":"Crowd favorite"
+    },
+    {
+        "image":"/kansikuvat/kuva5.jpg",
+        "name":"Santa's post office",
+        "year":2019,
+        "description":"A children's film that tells how the elves work hard at Santa's post office to get all the children's gift wishes delivered to Santa Claus",
+        "key1":"Kids",
+        "key2":"Crowd favorite"
+      },
+      {
+        "image":"/kansikuvat/kuva3.jpg",
+        "name":"Cats are taking over the world with robots",
+        "year":2022,
+        "description":"In this movie, cats and robots started working together to get rid of humans. But can humanity still be saved?",
+        "key1":"Scifi",
+        "key2":"Crowd favorite"
+      },
+      {
+        "image":"/kansikuvat/kuva7.jpg",
+        "name":"What is true?",
+        "year":2020,
+        "description":"This documentary tells about the paranormal phenomena experienced by people around the world. What do you believe in?",
+        "key1":"Documentary",
+        "key2":"Movie of the year"
+      },
+      {
+        "image":"/kansikuvat/kuva4.jpg",
+        "name":"The lost spaceship",
+        "year":2023,
+        "description":"In 2022, NASA lost a spaceship and hid the disappearance from the world. The reason for the disappearance was suspected to be the ship's artificial intelligence, because just before it disappeared it had sent strange messages. Do you want to find out what happened to the astronauts?",
+        "key1":"Scifi",
+        "key2":"Movie of the year"
+      },
+      {
+        "image":"/kansikuvat/kuva6.jpg",
+        "name":"Voluntarily disappeared",
+        "year":2018,
+        "description":"This document tells the stories of the voluntarily disappeared. Why did they disappear, and do they ever want to be found?",
+        "key1":"Documentary",
+        "key2":"Crowd favorite"
+      },
+      {
+        "image":"/kansikuvat/kuva8.jpg",
+        "name":"Nessa & Sofia",
+        "year":2021,
+        "description":"A children's film that follows the adventures of two dolls",
+        "key1":"Kids",
+        "key2":"Movie of the year"
+      },
+      {
+        "image":"/kansikuvat/kuva2.jpg",
+        "name":"On the other side",
+        "year":2015,
+        "description":"Ghosts abducted people to the side of the dead. Can the ghosts be stopped before it's too late?",
+        "key1":"Horror",
+        "key2":"Movie of the year"
+      }
+]
