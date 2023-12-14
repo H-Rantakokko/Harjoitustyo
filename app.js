@@ -1,13 +1,23 @@
-// Haetaan tiedot movies.json tiedostosta
-const movies = require('./movies.json')
+// Tämä otettu suoraan tehtävästä H4T1
+async function getMovies() {
+    let url = 'movies.json'
+    try {
+        let res = await fetch(url)
+        return await res.json()
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 // Tämä seuraava näyttää kaikki elokuvat heti kun sivu ladataan
 async function showMovies() {
-    // Tämä lisätty jotta voidaan julkaista renderin kautta
-    if (typeof window !== 'undefined') {
-        const moviediv = document.getElementById('movies')
+    movies = await getMovies()
+    console.log(movies)
 
-        movies.forEach((movie) => {
+    let moviediv = document.getElementById("movies")
+
+    
+    movies.forEach(movie => {
         let moviecontainer = document.createElement('div')
         moviecontainer.className = 'movieContainer'
         // Haetaan kuvat
@@ -73,6 +83,5 @@ async function updateMovies() {
 
         document.getElementById("movies").appendChild(moviecontainer)
     })
-}
 }
 showMovies()
